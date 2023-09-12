@@ -31,4 +31,12 @@ public class Author {
     public int hashCode() {
         return java.util.Objects.hash(firstName);
     }
+
+    public boolean equals(Object other) {
+        if (this.getClass() != other.getClass()) {
+            return false;
+        }
+        Author c2 = (Author) other;
+        return lastName.equals(c2.lastName);
+    }
 }

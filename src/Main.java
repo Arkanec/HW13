@@ -14,5 +14,17 @@ public class Main {
 
         System.out.println(jefferyDeaver);
         System.out.println(extinct);
+
+        Author joanaRoyling = new Author("Джоана", "Роулинг");
+
+        Book harryPotter = new Book("Гарри Поттер", 2002, joanaRoyling);
+
+        public boolean equals(Object other) {
+            if (this.getClass() != joanaRoyling.getClass()) {
+                return false;
+            }
+            Author c2 = (Author) joanaRoyling;
+            return jefferyDeaver.equals(c2.Author);
+        }
     }
 }
