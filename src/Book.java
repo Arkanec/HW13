@@ -32,8 +32,10 @@ public class Book {
         Book that = (Book) o;
 
         if (bookName != that.bookName) return false;
-        return Book.equals(bookName, that.bookName);
+        return bookName == bookName;
     }
+
+
 
     public int hashCode() {
         return java.util.Objects.hash(bookName);
