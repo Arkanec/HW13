@@ -25,12 +25,14 @@ public class Book {
         return  "Название" + " " + this.bookName + " " + "Год публикации" + " " + this.publicationYear;
     }
 
-    public boolean equals(Object other) {
-        if (this.getClass() != other.getClass()) {
-            return false;
-        }
-        Author c2 = (bookName) other;
-        return bookName.equals(c2.bookName);
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Book that = (Book) o;
+
+        if (bookName != that.bookName) return false;
+        return Book.equals(bookName, that.bookName);
     }
 
     public int hashCode() {
