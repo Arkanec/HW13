@@ -19,13 +19,12 @@ public class Author {
     public String toString() {
         return "Автор" + " " + this.firstName + " " + this.lastName;
     }
-
-    public boolean equals(Object other) {
-        if (this.getClass() != other.getClass()) {
-            return false;
-        }
-        Author c2 = (Author) other;
-        return firstName.equals(c2.firstName);
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Author author = (Author) o;
+        return Object.equals(getFirstName(), author.getFirstName()) && Object.equals(getLastName(), author.getLastName());
     }
 
     public int hashCode() {
