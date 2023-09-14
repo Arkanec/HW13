@@ -23,5 +23,9 @@ public class Main {
         System.out.println(harryPotter == extinct);
         //true
         System.out.println(harryPotter.equals(extinct));
+        Author author1 = new Author("Джоана", "Роулинг");
+        Author copyAuthor1 = new Author("Джеффри", "Дивер");
+        System.out.println("author1.equals(copyAuthor1) returns " + author1.equals(copyAuthor1));
+
         }
     }
